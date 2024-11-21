@@ -1,0 +1,260 @@
+
+nav {
+    background-color: #333;
+    padding: 15px;
+}
+
+.container-navbar {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    align-items: center; /* Vertikal rata tengah */
+}
+
+.ul-navbar {
+    display: flex; /* Mengatur tata letak item sebagai flex items */
+    width: 100%; /* Supaya ul mengambil seluruh lebar */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ul-navbar .logo {
+    margin-right: 20px; /* Memberi jarak pada logo */
+}
+
+.ul-navbar .li-navbar {
+    margin-right: 20px; /* Jarak antara item navbar */
+}
+
+.ul-navbar .admin {
+    margin-left: auto; /* Menempatkan elemen dengan class 'admin' di sisi kanan */
+}
+
+nav ul li {
+    display: flex;
+    align-items: center; /* Menyamakan tinggi elemen */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 5px;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+nav ul li.logo img {
+    height: 1.9em; /* Mengatur tinggi gambar logo */
+    vertical-align: middle;
+}
+
+
+.background-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+    overflow: hidden; 
+}
+
+.background-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('library-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(70%);
+    z-index: 1; 
+}
+
+.background-content h1,
+.background-content p {
+    position: relative;
+    z-index: 2;
+}
+
+.background-content h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.background-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.tersedia h1 {
+    text-align: center;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 100% 100%;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.owl-carousel.team-carousel {
+    position: relative;
+    padding: 0 30px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.team-item {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.team-item .bg-light {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+.team-item h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-item p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.team-item .d-flex a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.team-item .d-flex a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .owl-carousel.team-carousel {
+        padding: 0 15px;
+    }
+
+    .team-item {
+        margin-bottom: 20px;
+    }
+}
+
+.category-container {
+    margin-bottom: 40px;
+}
+.category-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px 0;
+    font-size: 1.9em;
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.book-item {
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.book-info {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.book-item img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.book-title {
+    font-size: 1.1em;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+.book-author, .book-year {
+    margin: 5px 0;
+}
+.btn-pinjam {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.btn-pinjam.disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+.btn-pinjam:hover {
+    background-color: #45a049;
+}
